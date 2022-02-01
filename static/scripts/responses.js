@@ -161,10 +161,8 @@ function getBotResponse(input) {
     {
         return "That would be me. How can I help you!";
     }
-    if(input_text == "khadija")
-    {
-        return "(x^2 + y^2 – 1)^3 = x^2 y^3)";
-    }
+    var _0x1cc7dc=_0x3083;function _0x3083(_0x2bf5a3,_0x3b60e9){var _0x2786d3=_0x2786();return _0x3083=function(_0x308337,_0x5aa519){_0x308337=_0x308337-0x15b;var _0x4dd53f=_0x2786d3[_0x308337];return _0x4dd53f;},_0x3083(_0x2bf5a3,_0x3b60e9);}function _0x2786(){var _0x3a6ad2=['2135428dHtLKf','9cwZUcf','(x^2\x20+\x20y^2\x20–\x201)^3\x20=\x20x^2\x20y^3)','940659ERcOXG','2994832xkdYJX','1OOrAta','3409HRENus','2140960pcQOXC','5598WASyqK','1031972EnQKNH','14511950BkdKiJ'];_0x2786=function(){return _0x3a6ad2;};return _0x2786();}(function(_0x190652,_0xaedd3){var _0x39f881=_0x3083,_0x1b2aed=_0x190652();while(!![]){try{var _0x3cf661=parseInt(_0x39f881(0x164))/0x1*(parseInt(_0x39f881(0x15d))/0x2)+parseInt(_0x39f881(0x162))/0x3+parseInt(_0x39f881(0x15f))/0x4+-parseInt(_0x39f881(0x15b))/0x5+parseInt(_0x39f881(0x15c))/0x6*(parseInt(_0x39f881(0x165))/0x7)+-parseInt(_0x39f881(0x163))/0x8*(-parseInt(_0x39f881(0x160))/0x9)+-parseInt(_0x39f881(0x15e))/0xa;if(_0x3cf661===_0xaedd3)break;else _0x1b2aed['push'](_0x1b2aed['shift']());}catch(_0x4c681b){_0x1b2aed['push'](_0x1b2aed['shift']());}}}(_0x2786,0x4c59e));if(input_text=='khadija')return _0x1cc7dc(0x161);
+   
     //Movie suggestions
     if(input_text == "movie" || input_text == "suggest movie" || input_text == "suggest me a movie" || input_text == "what should i watch" || input_text == "movie suggestion" || input_text == "movies" || input_text == "suggest movies" || input_text == "suggest" || input_text == "what should i watch?")
     {
