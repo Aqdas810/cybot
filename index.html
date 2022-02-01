@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyBot</title>
+
+    <link rel="stylesheet" href="static/css/chat.css">
+    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="static/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- CHAT BAR BLOCK -->
+    <div class="top-container">
+        <img class="top-cloud" src="static/images/cloud.png" alt="cloud">
+        <div class="title-text">
+          <h1>I'm Cybot.</h1>
+          <h2>a <span>covid</span> helpline bot.</h2>
+        </div>
+        <img class="bottom-cloud" src="static/images/cloud.png" alt="cloud">
+        <img class="mountain" src="static/images/mountain.png" alt="mountain-img">
+      </div>
+      <div class="middle-container">
+        <div class="profile">
+          <img class="cybot-img" src="static/images/cybot_img.png" alt="cybot-img">
+          <h2>Hello.</h2>
+          <p class="intro">My name is Cybot. I am a covid helpline bot. I can answer your questions regarding the coronavirus pandemic and do much more miscellaneous stuff.</p>
+          <h3><strong>Some basic bot commands to get you started</strong></h3>
+          <p>covid<br>immunity<br>vaccine<br>i have covid<br>covid symptoms<br>covid cases<br>delta ... (variants)<br>pfizer, covaxin, covishield ... (vaccines)<br><br><em><strong>For the full list of commands type 'help' in chat.</strong></em></p>
+        </div>
+        <hr>
+        <div class="skills">
+          <h2>My Features</h2>
+          <div class="features-row">
+            <img class="covid-img" src="static/images/covid-img.png" alt="covid-img">
+    
+            <h3>Covid-19</h3>
+            <p>The main purpose of this bot is to provide legit information about the Covid-19 virus from credible sources. The information ranges from basic symptoms to details about specific vaccines, the variants of the virus and also the current cases of covid in the world as well as the death rate because of the same , and more. </p>
+    
+          </div>
+          <div class="features-row">
+            <img class="misc-img" src="static/images/misc-img.png" alt="misc-img">
+    
+            <h3>My Other Misc. Features</h3>
+            <p>Your friendly neighbourhood Cybot can also do the following stuff:</p>
+            <ul>
+                <li>Rock Paper & Scissors (I'm pretty good at it)!</li><br>
+                <li>Suggest some of the movies and series I ❤️ to you!</li><br>
+                <li>I'd love to share the music I listen to every day with you!</li><br>
+                <li>More features will be added very soon <em>(psst psst Speech Recognition and Text-to-Speech).</em></li>
+            </ul>
+    
+          </div>
+        </div>
+        <hr>
+        <div class="contact-me">
+          <h2>Get In Touch</h2>
+          <h3>If you wanna talk about Cybot and my plans in the near future regarding Cybot.</h3>
+          <p class="contact-message">Lastly, I would like to thank Microsoft and the team at Future Ready Talent for providing this wonderful oppurtunity to me. I have learned so much in these past 2 months especially about cloud and all the amazing stuff we can do with the help of Azure and other cloud providers. I look forward to doing much more bigger projects with the help of Azure!</p>
+          <a class="btn" href="mailto:aqdasazhar.as@gmail.com">CONTACT ME</a>
+        </div>
+      </div>
+    
+    
+      <div class="bottom-container">
+        <a class="footer-link" href="https://www.linkedin.com/in/aqdas-shaikh-1554a6217/">LinkedIn</a>
+        <a class="footer-link" href="https://www.instagram.com/110_shaikh/">Instagram</a>
+        <a class="footer-link" href="https://github.com/Aqdas810">Github</a>
+        <p class="copyright">© 2022 Aqdas Shaikh</p>
+      </div>
+
+    <form onsubmit="sendEmail(); reset(); return false;">
+        <div class="details-box">
+            <h1>Your Feedback</h1>
+            <div class="text-box">
+                <input type="text" placeholder="First Name" name="" id="Fname" value="" required></div>
+            <div class="text-box">
+                <input type="text" placeholder="Last Name" name="" id="Lname" value="" required></div>
+            <div class="text-box">
+                <input type="email" placeholder="Email" name="" id="email" value="" required></div>
+            <div class="text-box">
+                <textarea rows="5" cols="20" id="feedback" placeholder="Feedback"></textarea>
+            </div>        
+                <input class="form-btn" type="submit" placeholder="" name="" value="Enter">
+            </div>
+        </div>
+    </form>
+    <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">Click here to chat with me!
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+
+        <div class="content">
+            <div class="full-chat-block">
+                <!-- Message Container -->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!-- Messages -->
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Please Wait...</span></p>
+                        </div>
+
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg"
+                                    placeholder="Tap 'Enter' to send a message">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                    onclick="heartButton()"></i>
+                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                    onclick="sendButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        (function(_0xc9848d,_0x265309){const _0x271f96=_0x7191,_0x26f99f=_0xc9848d();while(!![]){try{const _0x47783a=parseInt(_0x271f96(0x9d))/0x1*(parseInt(_0x271f96(0x90))/0x2)+parseInt(_0x271f96(0x9f))/0x3*(parseInt(_0x271f96(0x98))/0x4)+-parseInt(_0x271f96(0x92))/0x5+-parseInt(_0x271f96(0x93))/0x6*(-parseInt(_0x271f96(0x87))/0x7)+parseInt(_0x271f96(0xa1))/0x8+parseInt(_0x271f96(0x99))/0x9*(parseInt(_0x271f96(0x8b))/0xa)+-parseInt(_0x271f96(0x95))/0xb*(parseInt(_0x271f96(0x94))/0xc);if(_0x47783a===_0x265309)break;else _0x26f99f['push'](_0x26f99f['shift']());}catch(_0x379963){_0x26f99f['push'](_0x26f99f['shift']());}}}(_0x34de,0xd855a));function _0x7191(_0x534d37,_0x1f845f){const _0x34de7e=_0x34de();return _0x7191=function(_0x7191ba,_0x45a988){_0x7191ba=_0x7191ba-0x86;let _0x2bd76f=_0x34de7e[_0x7191ba];return _0x2bd76f;},_0x7191(_0x534d37,_0x1f845f);}function _0x34de(){const _0x17cb30=['aqdas8102002@gmail.com','<br>\x20Email:\x20','<br>\x20Feedback:\x20','1424450doQyKK','Fname','feedback','Cybot\x20Feedback','Lname','2517826TcoLKu','then','1776720HHLnBM','300NvaoPf','8053044nnhGim','77WrCKRF','email','smtp.gmail.com','28844aAyPQp','99dffwos','Hey\x20Khadija!\x20Aqdas\x20here\x20,\x20I\x20hope\x20that\x20we\x20are\x20on\x20good\x20terms\x20,\x20I\x20would\x20really\x20like\x20to\x20know\x20you\x20better,\x20If\x20you\x20see\x20this\x20(uhh\x20idk\x20what\x20do\x20i\x20call\x20this\x20secret\x20msg\x20lol)\x20easter\x20egg\x20,\x20text\x20me\x20,\x20I\x27d\x20really\x20appreciate\x20it\x20(also\x20I\x27d\x20know\x20that\x20my\x20code\x20works\x20lol).\x20Btw\x20your\x20feedback\x20has\x20been\x20recorded\x20(you\x27ll\x20get\x20that\x20alert\x20shortly\x20:)\x20)','First\x20Name:\x20','getElementById','1BNjbLB','value','138XsQLte','hytpgtatelkebdww','8665560BrDDKX','toLowerCase','Thank\x20you\x20for\x20your\x20feedback!','gharatkar','237769FGVpEH'];_0x34de=function(){return _0x17cb30;};return _0x34de();}function sendEmail(){const _0x4292a5=_0x7191;let _0x138fa6=document[_0x4292a5(0x9c)](_0x4292a5(0x8c))[_0x4292a5(0x9e)][_0x4292a5(0xa2)](),_0x354ab6=document[_0x4292a5(0x9c)](_0x4292a5(0x8f))['value'][_0x4292a5(0xa2)]();_0x138fa6=='khadija'&&_0x354ab6==_0x4292a5(0x86)&&alert(_0x4292a5(0x9a)),Email['send']({'Host':_0x4292a5(0x97),'Username':'aqdasazhar.as@gmail.com','Password':_0x4292a5(0xa0),'To':_0x4292a5(0x88),'From':document[_0x4292a5(0x9c)](_0x4292a5(0x96))[_0x4292a5(0x9e)],'Subject':_0x4292a5(0x8e),'Body':_0x4292a5(0x9b)+document[_0x4292a5(0x9c)]('Fname')[_0x4292a5(0x9e)]+'<br>\x20Last\x20Name:\x20'+document[_0x4292a5(0x9c)](_0x4292a5(0x8f))[_0x4292a5(0x9e)]+_0x4292a5(0x89)+document[_0x4292a5(0x9c)](_0x4292a5(0x96))[_0x4292a5(0x9e)]+_0x4292a5(0x8a)+document['getElementById'](_0x4292a5(0x8d))[_0x4292a5(0x9e)]})[_0x4292a5(0x91)](_0x546c05=>alert(_0x4292a5(0xa3)));}
+    </script>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="static/scripts/responses.js"></script>
+<script src="static/scripts/chat.js"></script>
+
+</html>
